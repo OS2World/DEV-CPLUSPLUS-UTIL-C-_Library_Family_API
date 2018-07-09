@@ -1,0 +1,384 @@
+#
+#     *******************************************************************
+#       JdeBP C++ Library Routines      General Public Licence v1.00
+#           Copyright (c) 1991,1992  Jonathan de Boyne Pollard
+#     *******************************************************************
+#
+# MAKEFILE --
+#
+
+all : object\famapi.lib famapi.doc
+
+.AUTODEPEND
+
+.PATH.obj = .\OBJECT
+.PATH.cpp = .\SOURCE
+
+#       *Translator Definitions*
+CC = bcc +FAMAPI.CFG
+TASM = TASM
+TLIB = tlib
+INCLUDEPATH = include;..\include
+
+
+LINK = \OS2\Link
+LIB = LIB
+
+#       * Documentation *
+
+famapi.doc : famapi.1
+        proff famapi.1 > famapi.doc
+
+#       *Implicit Rules*
+.c.obj:
+  $(CC) -c {$< }
+
+.cpp.obj:
+  $(CC) -c {$< }
+
+#       *List Macros*
+
+
+LIB_dependencies =  \
+ beep.obj \
+ bufreset.obj \
+ close.obj \
+ country.obj \
+ datetime.obj \
+ dbcsev.obj \
+ delete.obj \
+ dir.obj \
+ doscreat.obj \
+ dosfind.obj \
+ dosioctl.obj \
+ dosopen.obj \
+ dosqdriv.obj \
+ dosqftim.obj \
+ dosqpsp.obj \
+ dossdriv.obj \
+ dossftim.obj \
+ dossleep.obj \
+ dosslp18.obj \
+ dosvect.obj \
+ doswrite.obj \
+ dosxopen.obj \
+ dup.obj \
+ execpgm.obj \
+ exit.obj \
+ find.obj \
+ getenv.obj \
+ huge.obj \
+ infoseg.obj \
+ kbdfocus.obj \
+ kbdstatu.obj \
+ keyboard.obj \
+ locks.obj \
+ machmode.obj \
+ memory.obj \
+ message.obj \
+ mouse.obj \
+ move.obj \
+ newsize.obj \
+ open.obj \
+ qdir.obj \
+ qdisk.obj \
+ qfilei.obj \
+ qfilem.obj \
+ qhantype.obj \
+ read.obj \
+ rmdir.obj \
+ scanenv.obj \
+ srchpath.obj \
+ seek.obj \
+ seldisk.obj \
+ setfilei.obj \
+ setfilem.obj \
+ setmaxfh.obj \
+ setsig.obj \
+ setvect.obj \
+ sleep.obj \
+ suballoc.obj \
+ verify.obj \
+ version.obj \
+ vesabios.obj \
+ vioansi.obj \
+ vioconfi.obj \
+ viocurso.obj \
+ viodos.obj \
+ viogphys.obj \
+ viomode.obj \
+ vioread.obj \
+ vioscrol.obj \
+ viotty.obj \
+ viowrite.obj \
+ write.obj
+
+#       *Explicit Rules*
+object\famapi.lib: famapi.cfg $(LIB_dependencies)
+  $(LIB) @&&|
+$< &
+-+$(.PATH.obj)\beep.obj &
+-+$(.PATH.obj)\bufreset.obj &
+-+$(.PATH.obj)\close.obj &
+-+$(.PATH.obj)\country.obj &
+-+$(.PATH.obj)\datetime.obj &
+-+$(.PATH.obj)\dbcsev.obj &
+-+$(.PATH.obj)\delete.obj &
+-+$(.PATH.obj)\dir.obj &
+-+$(.PATH.obj)\doscreat.obj &
+-+$(.PATH.obj)\dosfind.obj &
+-+$(.PATH.obj)\dosioctl.obj &
+-+$(.PATH.obj)\dosopen.obj &
+-+$(.PATH.obj)\dosqdriv.obj &
+-+$(.PATH.obj)\dosqftim.obj &
+-+$(.PATH.obj)\dosqpsp.obj &
+-+$(.PATH.obj)\dossdriv.obj &
+-+$(.PATH.obj)\dossftim.obj &
+-+$(.PATH.obj)\dossleep.obj &
+-+$(.PATH.obj)\dosslp18.obj &
+-+$(.PATH.obj)\dosvect.obj &
+-+$(.PATH.obj)\doswrite.obj &
+-+$(.PATH.obj)\dosxopen.obj &
+-+$(.PATH.obj)\dup.obj &
+-+$(.PATH.obj)\execpgm.obj &
+-+$(.PATH.obj)\exit.obj &
+-+$(.PATH.obj)\find.obj &
+-+$(.PATH.obj)\getenv.obj &
+-+$(.PATH.obj)\huge.obj &
+-+$(.PATH.obj)\infoseg.obj &
+-+$(.PATH.obj)\kbdfocus.obj &
+-+$(.PATH.obj)\kbdstatu.obj &
+-+$(.PATH.obj)\keyboard.obj &
+-+$(.PATH.obj)\locks.obj &
+-+$(.PATH.obj)\machmode.obj &
+-+$(.PATH.obj)\memory.obj &
+-+$(.PATH.obj)\message.obj &
+-+$(.PATH.obj)\mouse.obj &
+-+$(.PATH.obj)\move.obj &
+-+$(.PATH.obj)\newsize.obj &
+-+$(.PATH.obj)\open.obj &
+-+$(.PATH.obj)\qdir.obj &
+-+$(.PATH.obj)\qdisk.obj &
+-+$(.PATH.obj)\qfilei.obj &
+-+$(.PATH.obj)\qfilem.obj &
+-+$(.PATH.obj)\qhantype.obj &
+-+$(.PATH.obj)\read.obj &
+-+$(.PATH.obj)\rmdir.obj &
+-+$(.PATH.obj)\scanenv.obj &
+-+$(.PATH.obj)\srchpath.obj &
+-+$(.PATH.obj)\seek.obj &
+-+$(.PATH.obj)\seldisk.obj &
+-+$(.PATH.obj)\setfilei.obj &
+-+$(.PATH.obj)\setfilem.obj &
+-+$(.PATH.obj)\setmaxfh.obj &
+-+$(.PATH.obj)\setsig.obj &
+-+$(.PATH.obj)\setvect.obj &
+-+$(.PATH.obj)\sleep.obj &
+-+$(.PATH.obj)\suballoc.obj &
+-+$(.PATH.obj)\verify.obj &
+-+$(.PATH.obj)\version.obj &
+-+$(.PATH.obj)\vesabios.obj &
+-+$(.PATH.obj)\vioansi.obj &
+-+$(.PATH.obj)\vioconfi.obj &
+-+$(.PATH.obj)\viocurso.obj &
+-+$(.PATH.obj)\viodos.obj &
+-+$(.PATH.obj)\viogphys.obj &
+-+$(.PATH.obj)\viomode.obj &
+-+$(.PATH.obj)\vioread.obj &
+-+$(.PATH.obj)\vioscrol.obj &
+-+$(.PATH.obj)\viotty.obj &
+-+$(.PATH.obj)\viowrite.obj &
+-+$(.PATH.obj)\write.obj
+$*.lst ;
+|
+
+
+#       *Individual File Dependencies*
+beep.obj: famapi.cfg beep.cpp
+
+bufreset.obj: famapi.cfg bufreset.cpp
+
+close.obj: famapi.cfg close.cpp
+
+country.obj: famapi.cfg country.cpp
+
+datetime.obj: famapi.cfg datetime.cpp
+
+dbcsev.obj: famapi.cfg dbcsev.cpp
+
+delete.obj: famapi.cfg delete.cpp
+
+dir.obj: famapi.cfg dir.cpp
+
+doscreat.obj: famapi.cfg doscreat.cpp
+
+dosfind.obj: famapi.cfg dosfind.cpp
+
+dosioctl.obj: famapi.cfg dosioctl.cpp
+
+dosopen.obj: famapi.cfg dosopen.cpp
+
+dosqdriv.obj: famapi.cfg dosqdriv.cpp
+
+dosqftim.obj: famapi.cfg dosqftim.cpp
+
+dosqpsp.obj: famapi.cfg dosqpsp.cpp
+
+dossdriv.obj: famapi.cfg dossdriv.cpp
+
+dossftim.obj: famapi.cfg dossftim.cpp
+
+dossleep.obj: famapi.cfg dossleep.cpp
+
+dosslp18.obj: famapi.cfg dosslp18.cpp
+
+dosvect.obj: famapi.cfg dosvect.cpp
+
+doswrite.obj: famapi.cfg doswrite.cpp
+
+dosxopen.obj: famapi.cfg dosxopen.cpp
+
+dup.obj: famapi.cfg dup.cpp
+
+execpgm.obj: famapi.cfg execpgm.cpp
+
+exit.obj: famapi.cfg exit.cpp
+
+find.obj: famapi.cfg find.cpp
+
+getenv.obj: famapi.cfg getenv.cpp
+
+huge.obj: famapi.cfg huge.cpp
+
+infoseg.obj: famapi.cfg infoseg.cpp
+
+kbdfocus.obj: famapi.cfg kbdfocus.cpp
+
+kbdstatu.obj: famapi.cfg kbdstatu.cpp
+
+keyboard.obj: famapi.cfg keyboard.cpp
+
+locks.obj: famapi.cfg locks.cpp
+
+machmode.obj: famapi.cfg machmode.cpp
+
+memory.obj: famapi.cfg memory.cpp
+
+message.obj: famapi.cfg message.cpp
+
+mouse.obj: famapi.cfg mouse.cpp
+
+move.obj: famapi.cfg move.cpp
+
+newsize.obj: famapi.cfg newsize.cpp
+
+open.obj: famapi.cfg open.cpp
+
+qdir.obj: famapi.cfg qdir.cpp
+
+qdisk.obj: famapi.cfg qdisk.cpp
+
+qfilei.obj: famapi.cfg qfilei.cpp
+
+qfilem.obj: famapi.cfg qfilem.cpp
+
+qhantype.obj: famapi.cfg qhantype.cpp
+
+read.obj: famapi.cfg read.cpp
+
+rmdir.obj: famapi.cfg rmdir.cpp
+
+scanenv.obj: famapi.cfg scanenv.cpp
+
+srchpath.obj: famapi.cfg srchpath.cpp
+
+seek.obj: famapi.cfg seek.cpp
+
+seldisk.obj: famapi.cfg seldisk.cpp
+
+setfilei.obj: famapi.cfg setfilei.cpp
+
+setfilem.obj: famapi.cfg setfilem.cpp
+
+setmaxfh.obj: famapi.cfg setmaxfh.cpp
+
+setsig.obj: famapi.cfg setsig.cpp
+
+setvect.obj: famapi.cfg setvect.cpp
+
+sleep.obj: famapi.cfg sleep.cpp
+
+suballoc.obj: famapi.cfg suballoc.cpp
+
+verify.obj: famapi.cfg verify.cpp
+
+version.obj: famapi.cfg version.cpp
+
+vesabios.obj: famapi.cfg vesabios.cpp
+
+vioansi.obj: famapi.cfg vioansi.cpp
+
+vioconfi.obj: famapi.cfg vioconfi.cpp
+
+viocurso.obj: famapi.cfg viocurso.cpp
+
+viodos.obj: famapi.cfg viodos.cpp
+
+viogphys.obj: famapi.cfg viogphys.cpp
+
+viomode.obj: famapi.cfg viomode.cpp
+
+vioread.obj: famapi.cfg vioread.cpp
+
+vioscrol.obj: famapi.cfg vioscrol.cpp
+
+viotty.obj: famapi.cfg viotty.cpp
+
+viowrite.obj: famapi.cfg viowrite.cpp
+
+write.obj: famapi.cfg write.cpp
+
+#       *Compiler Configuration File*
+famapi.cfg: makefile
+  copy &&|
+-R
+-ml
+-K
+-v
+-y
+-O
+-Oe
+-Ob
+-Z
+-k-
+-d
+-vi
+-Jg
+-Vmv
+-Vs
+-H=FAMAPI.SYM
+-w-ret
+-w-nci
+-w-inl
+-wpin
+-wamb
+-w-par
+-w-cpt
+-wdef
+-w-dup
+-w-ill
+-w-sus
+-wstv
+-w-ext
+-w-ias
+-w-ibc
+-w-pre
+-w-nst
+-n$(.PATH.obj)
+-I$(INCLUDEPATH)
+-L$(LIBPATH)
+-zCFAMAPI_TEXT
+-zPFAMAPI
+-P-.C
+| famapi.cfg
+

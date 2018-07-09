@@ -1,0 +1,12 @@
+      컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴�
+       16-bit OS/2 2.x Family API library for Borland C++ 3.x for DOS.
+      컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴�
+
+  This archive contains the full source to the 16-bit Family API calls for
+  OS/2, reverse ported to Borland C++ 3.x for PC-DOS.
+
+  The entire library is self contained, and can be linked with high-level
+  languages such as Microsoft BASIC PDS 7.1 or Microsoft Visual BASIC, and
+  the forthcoming shareware Borland C++ 3.x 16-bit conversion kit for OS/2.
+
+               ** THIS IS NOT MICROSOFT NOR IBM SOURCE CODE **

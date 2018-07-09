@@ -1,0 +1,12 @@
+@ECHO OFF
+SETLOCAL
+
+ECHO BUILD V1.0 Construct the Family API library
+ECHO (c) Copyright 1992 Jonathan de Boyne Pollard.  All rights reserved.
+
+if not isdir Object md Object
+make -fmakefile || quit %?
+describe Object\FamAPI.LIB "Family API (OS/2 Compatibility) Library"
+del Object\FamAPI.BAK
+
+copy Object\*.lib ..\Lib /C

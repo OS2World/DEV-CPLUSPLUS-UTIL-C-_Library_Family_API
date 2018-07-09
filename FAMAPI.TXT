@@ -1,0 +1,349 @@
+ Documentation for C++ Library                                       Page 1
+ 
+            C++ Library Family API Documentation -- 13th June 1993
+ 
+                             Package Version 1.00
+ 
+             Package Copyright (c) 1993 Jonathan de Boyne Pollard
+              Licensed under General Public Licence version 1.00
+ 
+                Jonathan de Boyne Pollard, c/o 1 Queen's Close
+                      KENILWORTH  CV8 1JR, United Kingdom
+                   Telephone +44 926 484512 (0900-1730 GMT)
+ 
+            I am also available in the FIDO OS2PROG and OS2DOS echos,
+        and on the Mission Impossible BBS, Nottingham, United Kingdom on
+                      +44 602 655394/654329/654680/653247.
+ 
+     This file is plain ANSI text with embedded tabs and form-feeds. It may be
+     viewed with an ANSI file viewer. This is preferable to printing it out,
+     because saving paper saves the environment.
+ 
+     To view :    LIST FAMAPI.DOC        (Vernon Buerg's file viewer)
+     To print :   PRINT FAMAPI.DOC       (MDOS and OS/2 print utility)
+ 
+     This file contains documentation for the Family API portion of the C++
+     library written for Borland C++ version 3.x by Jonathan de Boyne Pollard.
+     The library has been tested in programs compiled for real and protected
+     mode under OS/2 2.0 and DR-DOS 6.0.
+ 
+     Although I have taken great pains to ensure that the library is
+     problem-free (or at least, any known problems are thoroughly documented),
+     if you do find a problem with it, please contact me in writing at the
+     address given and I will attempt to cure it. Please provide example source
+     code and makefiles where possible.
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Copyright (c) 1991-1993 JdeBP
+ Documentation for C++ Library                                       Page 2
+ 
+     Purpose
+     ÄÄÄÄÄÄÄ
+ 
+     You will need this Family API library to develop 16-bit dual mode
+     OS/2 programs using Borland C++ 3.x for DOS.
+ 
+     Although it is not needed in protected mode, this provides support for
+     v8086 and real mode DOS equivalents for all OS/2 calls made by the
+     Cx.LIB libraries.
+ 
+     This library can also be used as a separate product for those who wish
+     to use all of the functionality of OS/2's high-level-language API
+     instead of assembly language calls for PC-DOS.
+ 
+     Full source is provided for your reference only. Note that COPYING.DOC
+     restricts you to only distributing the original library in the original
+     form that you obtained it. The MANIFEST document details what the
+     library should contain.
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Copyright (c) 1991-1993 JdeBP
+ Documentation for C++ Library                                       Page 3
+ 
+     Family API calls
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ 
+     Full documentation of the Family API calls can be found in any good OS/2
+     1.x 16-bit reference. Most 16-bit OS/2 calls map directly from the
+     PC-DOS API, although the parameters and functions of some were tidied up
+     some.
+ 
+     The PRCP.INF file is also available as shareware (not from me, though!)
+     for those who wish to have the 16-bit API in INF format. I use it myself
+     just to cross-check this library.
+ 
+     It is interesting to note that the December 1992 beta release of OS/2
+     2.1 contained versions of Dos16SubSet/Dos16SubAlloc/Dos16SubFree that
+     would cause segmentation faults under certain conditions.
+ 
+     The author linked the versions of those calls supplied here instead of
+     the DOSCALLS1.DLL versions, and the author's worked in protected mode.
+     At the time of writing it is unknown whether the 2.1 GA code has been
+     fixed (GA release is tomorrow would you believe ?).
+ 
+     Source
+     ÄÄÄÄÄÄ
+ 
+     In order to recompile, you will need the <dos.h>, <os2.h>, and
+     <limits.h> headers from the shareware Borland C++ 3.x cross-development
+     kit for OS/2. This has not been released at the time of writing, so the
+     INCLUDE.ZIP file contains the current versions of the headers.
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Copyright (c) 1991-1993 JdeBP
+ Documentation for C++ Library                                       Page 4
+ 
+     Mou Calls
+     ÄÄÄÄÄÄÄÄÄ
+ 
+     Note that the Mou calls have not been implemented. It is hoped that they
+     will be in a future version of this library.
+ 
+     Vio Calls
+     ÄÄÄÄÄÄÄÄÄ
+ 
+     The Vio routines will handle all text modes, and (to some extent)
+     graphics modes as well. However, background colours will not work in
+     graphics modes, and you may discover some oddities.
+ 
+     It is not the intention of this library to provide a graphics library
+     for DOS programs. If you wish to pursue graphics programs, I suggest
+     that you move directly to Presentation Manager.
+ 
+     The Vio mode changing routines will not handle dual monitors, although
+     this is of some inconvenience to the author, who is working on it for a
+     future release.
+ 
+     Kbd Calls
+     ÄÄÄÄÄÄÄÄÄ
+ 
+     The Kbd calls do not support some of the more esoteric features of the
+     Kbd interface, such as raw mode and reporting shift states. It is
+     suggested that anyone wishing to use such functionality switch to
+     Presentation Manager, which provides a much better keyboard interface.
+ 
+     The Kbd subsystem implemented here only accomodates enough to implement
+     <conio.h> functionality in the Borland C++ 16-bit cross-development
+     library.
+ 
+     Dos Calls
+     ÄÄÄÄÄÄÄÄÄ
+ 
+     The more obscure calls Dos, such as DosDevIoctl, have not been
+     implemented either, for the same reason, and also because the 16-bit
+     interface is not out of date for OS/2.
+ 
+     If you wish to tinker with the hardware directly, it is suggested that
+     you use the full 32-bit interface, which more fully supports CD-ROM and
+     Network file systems, as well as HPFS.
+ 
+
+
+
+
+
+
+
+
+
+
+
+ Copyright (c) 1991-1993 JdeBP
+ Documentation for C++ Library                                       Page 5
+ 
+     Forthcoming developments
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ 
+     As part of an effort to standardise cross-platform development on OS/2,
+     a future version of this library is planned that will link as a 16-bit
+     DLL under Microsoft Windows 3.x.
+ 
+     It is the author's belief that the library will work as it stands under
+     Windows 3.x, although the Dos3Call can be changed to use the
+     undocumented KERNEL call of the same name instead of issuing an INT 21h
+     instruction.
+ 
+     This allows the Borland C++ 16-bit conversion kit to link smaller
+     Windows 3.x programs with no change fo source code.
+ 
+     We look forward to a shareware MIRRORS system ...
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Copyright (c) 1991-1993 JdeBP
+ Documentation for C++ Library                                       Page 6
+ 
+     Other products from Jonathan de Boyne Pollard
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ 
+     Naturally, the Borland C++ for DOS 16-bit devlopment kit for OS/2 is
+     also available as BC3-OS2.ZIP.
+ 
+     Also available as shareware are twin sets of command-line utilities for
+     DOS and OS/2 sessions (DOSCLUnn.ZIP and OS2CLUnn.ZIP), developed with
+     this library, including :
+ 
+     ş FF - File Finder ş extended ATTRIB command ş
+     ş extended XDIR and XDEL commands ş WHICH file search utility ş
+     ş TOUCH file date/time utility ş Intelligent file DUMP ş
+     ş MEM memory (XMS/DPMI) display for DOS ş
+     ş And (as they say) many, many, more ...
+ 
+     These will be available from all good BBSes. If they are not available
+     to you locally they are also available for downloading from Mission
+     Impossible BBS in the United Kingdom, on +44 602
+     655394/654329/654680/653247.
+ 
+     Warranty and Licence
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ 
+     For warranty and licence conditions, see the file COPYING.DOC.
+ 
+     Credits
+     ÄÄÄÄÄÄÄ
+ 
+     Many thanks to Russ Freeman for testing early versions of this library.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Copyright (c) 1991-1993 JdeBP
+

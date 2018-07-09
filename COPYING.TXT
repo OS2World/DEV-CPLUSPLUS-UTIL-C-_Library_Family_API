@@ -1,0 +1,106 @@
+
+                  General Public Licence -- 06th June 1993
+
+                    Version 1.00 (Non-Chargeable Software)
+
+     Copyright (c) 1993 Jonathan de Boyne Pollard.  All Rights Reserved.
+
+               Jonathan de Boyne Pollard, c/o 1 Queen's Close
+                     KENILWORTH  CV8 1JR, United Kingdom
+                  Telephone +44 926 484514 (1000-1800 GMT)
+
+           I am also available in the FIDO OS2PROG and OS2DOS echos,
+       and on the Mission Impossible BBS, Nottingham, United Kingdom on
+                     +44 602 655394/654329/654680/653247.
+
+    This file is plain ASCII text with embedded tabs and form-feeds. It may be
+    viewed with an ASCII file viewer. This is preferable to printing it out,
+    because saving paper saves the environment.
+
+    To view :    LIST COPYING.DOC       (Vernon Buerg's file viewer)
+    To print :   PRINT COPYING.DOC      (MDOS and OS/2 print utility)
+
+CREDIT
+
+    Credit where credit is due. This document was inspired by the FSF General
+    Public License ("'c' for common noun", people !). However, it is not that
+    licence, and items covered by this licence are not covered by the FSF
+    licence.
+
+APOLOGIA
+
+    I have tried to write this document in Real English, rather than any legal
+    argot (dictionary definition: "The language of thieves"). So when I say
+    "spade", please read "groundsoil restructuring implement".
+
+DEFINITIONS
+
+    The "Software" is the release of the Family API library for Borland C++
+    and OS/2, the Shareware version of which I have uploaded to Mission
+    Impossible BBS and Abacus Vortex BBS in the United Kingdom. "I" refers
+    to the copyright holder and "You" the licensee.
+
+THIS LICENCE
+
+    I retain copyright over this licence. You may not alter it. However, I
+    grant you permission to use it in relation to any of your own works not in
+    any way already covered by it.
+
+    I retain copyright over the Software. However, I grant you this licence to
+    retain, copy, use, and redistribute it, subject to some conditions. If you
+    violate these conditions, you implicitly surrender all rights to the
+    Software.
+
+    If you exercise any or the rights to copy, use, or redistribute the
+    Software granted to you by this Licence, you implicitly indicate your
+    acceptance of its terms.
+
+    If you wish to redistribute the Software or a derivative under any other
+    terms and conditions, you must obtain written permision from me.
+
+    This Licence has a version number and date. Any Software covered by a
+    version of this Licence either states the version number or numbers that
+    are applicable, or should be considered to be covered by the latest
+    version of this Licence dated before the date of the Software.
+
+    Programs licenced under this licence fall into three categories, covered
+    by different versions of the licence : Shareware & Registered Software,
+    Non-Chargeable Software, and Source Licenced Software.
+
+GUARANTEE or WARRANTY
+
+    There is no guarantee or warranty.
+
+    If you redistribute the Software, your relation to third parties is the
+    same as mine to you in this respect, unless you specifically issue a
+    warranty (in which case, do not involve me please), for which you may
+    charge a fee.
+
+    (Non-chargeable Software)
+
+    Since you have not paid any money for this version of the Software, there
+    is no guarantee or warranty, nor any promise that the Software is of any
+    merchantable quality, that it does what it is claimed that it does, not
+    even that it does anything at all.
+
+    The Software is supplied "as-is", and any risks you take by having or
+    using it are entirely your own. If anything happens to you, your machine,
+    your data, or your cat (for all I know) as a result of possession or use
+    of the Software, you have no legal redress, except any given to you by
+    statute of course.
+
+COPYING, USE, MODIFICATION and REDISTRIBUTION
+
+    (Non-chargeable Software)
+
+    You may make as many copies as you like of the Software for archival and
+    security purposes, or redistribution.
+
+    You may only redistribute the original shareware form of the Software
+    without modifications, and may not transfer anything other than the whole
+    Software complete with documentation and licence.
+
+    You may not charge for redistribution other than for time and materials.
+
+    You may not modify, discompile, or reverse engineer the Software.
+

@@ -1,0 +1,46 @@
+
+       Borland C++ 16-Bit libraries Packing Manifest -- 13th June 1993
+
+                            Package Version 1.00
+
+            Package Copyright (c) 1993 Jonathan de Boyne Pollard
+             Licensed under General Public Licence version 1.00
+
+               Jonathan de Boyne Pollard, c/o 1 Queen's Close
+                     KENILWORTH  CV8 1JR, United Kingdom
+                  Telephone +44 926 484514 (1000-1800 GMT)
+
+           I am also available in the FIDO OS2PROG and OS2DOS echos,
+       and on the Mission Impossible BBS, Nottingham, United Kingdom on
+                     +44 602 655394/654329/654680/653247.
+
+    The preferred forms for distribution of this package are as either a ZIP
+    or ARJ archive. If that is not how you received this package, please
+    complain to the person or organisation where you obtained it from and
+    check the package thoroughly for viruses and trojan horses.
+
+    copying.doc          Text of the General Public Licence.  Please read.
+    manifest             List of files and packing details.
+    famapi.doc           Documentation for the library
+    makefile             For use with Borland C++ 3.x make
+    save.btm             4DOS batch file used to save the library
+    build.btm            4DOS batch file used to build the library
+    famapi.prj           Borland C++ 3.x project file
+    famapi.dsk           Borland C++ 3.x desktop file
+    famapi.cfg           Borland C++ 3.x BCC configuration file
+
+    OBJECT directory
+
+           All object files and the FAMAPI.LIB library
+
+    SOURCE directory
+
+           All source files. These are C++ (.CPP) source for Borland C++ 3.x
+           for DOS.
+
+    INCLUDE directory
+
+           famapi.h      Header for overall library use
+           dosdos.h      Header for internal calls (with DosDos prefix)
+           vio.h         Header for internal calls
+

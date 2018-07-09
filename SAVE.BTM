@@ -1,0 +1,52 @@
+@ECHO OFF
+SETLOCAL
+
+ECHO SAVE V1.0 Save the source and makefile for the Family API library
+ECHO (c) Copyright 1992 Jonathan de Boyne Pollard.  All rights reserved.
+
+set BtmDate=%@Date[%@FileDate[%@Search[ %0 ]]]
+iff %_DOS EQ DOS then
+    set ZipCmd=pkzip -rup -wHS -ex -o-
+    set ZipFiles=*.* ..\include\include.zip -x*.lst -x*.bak -x*.sym -x*.$$$
+else
+    set ZipCmd=zip -r -u -k -o -9
+    set ZipFiles=* ..\include\include.zip -x *.lst *.bak *.sym *.$$$
+endiff
+iff "%1" == "" then
+    set Drive=A:
+else
+    set Drive=%1
+endiff
+
+iff not exist FamAPI.ZIP .or. %@Date[%@FileDate[ FamAPI.ZIP ]] LT %BtmDate then
+text | pkzip -z FamAPI
+Family API C++ Library
+
+     อออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออ
+        JdeBP Family API C++ Library     General Public Licence v1.00
+               Copyright (c) 1991,1992  G.B. Computers Limited
+     อออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออ
+
+                       Release 1.00 -- 06th April 1993
+
+           You will need Info-ZIP's UNZIP to extract this archive,
+               or use the -D option to PKUNZIP version 2.04g.
+
+  = All batch files were written for the 4DOS or 4OS2 command processors. =
+
+endtext
+describe FamAPI.zip "ZIP file of the Family API Library"
+endiff
+
+%ZipCmd% FamAPI %ZipFiles%
+
+:AGAIN1
+iff not %@READY[%Drive%] EQ 1 then
+else
+    goto READY1
+endiff
+Pause Insert a disc in drive %Drive% and press any key :
+goto AGAIN1
+:READY1
+
+copy /u FamAPI.zip %Drive%\
